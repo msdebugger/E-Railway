@@ -1,0 +1,16 @@
+/*!
+ * AnnammaCss
+ * Railway Concession System (RCS)
+ * Author: Tony Thomas
+ * Email: <write2tonythomas@gmail.com>
+ 
+ * Core: General Layout Style
+ * -------------------------
+ */
+
+
+/* Custom Disabled */
+.rcs-disabled {
+	filter: alpha(opacity=50);
+	opacity: .4
+}

@@ -1,0 +1,28 @@
+#Remove php extension
+    RewriteEngine on 
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteCond %{REQUEST_FILENAME}\.php -f 
+    RewriteRule ^(.*)$ $1.php
+#Remove html extension
+    RewriteEngine on 
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    RewriteCond %{REQUEST_FILENAME}\.html -f 
+    RewriteRule ^(.*)$ $1.html
+	
+#Remove Get
+RewriteEngine On
+RewriteRule ^view_fresh_verification/(\w+) view_fresh_verification.php?rid=$1 [NC,L]
+RewriteRule ^view_renewal_verification/(\w+) view_renewal_verification.php?rid=$1 [NC,L]
+RewriteRule ^view_fresh_processing/(\w+) view_fresh_processing.php?rid=$1 [NC,L]
+RewriteRule ^view_renewal_processing/(\w+) view_renewal_processing.php?rid=$1 [NC,L]
+RewriteRule ^view_fresh_ready/(\w+) view_fresh_ready.php?rid=$1 [NC,L]
+RewriteRule ^view_renewal_ready/(\w+) view_renewal_ready.php?rid=$1 [NC,L]
+RewriteRule ^view_archive_fresh/(\w+) view_archive_fresh.php?rid=$1 [NC,L]
+RewriteRule ^view_archive_renewal/(\w+) view_archive_renewal.php?rid=$1 [NC,L]
+RewriteRule ^concession_print/(\w+) concession_print.php?rid=$1 [NC,L]
+
+
+# prevent folder listing
+IndexIgnore *
+# serve alternate default index page
+#DirectoryIndex home.php
